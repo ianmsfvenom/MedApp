@@ -37,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
         Retrofit apiClientDatabase = ApiClientDatabase.getRetrofitClient();
         ApiServicesDatabase apiServicesDatabase = apiClientDatabase.create(ApiServicesDatabase.class);
 
-        SharedPreferences credentialPreferences = getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences credentialPreferences = getSharedPreferences("credentials", Context.MODE_PRIVATE);
         SharedPreferences.Editor credentialsEditor = credentialPreferences.edit();
         String savedUsername = credentialPreferences.getString("username", null);
         String savedPassword = credentialPreferences.getString("password", null);

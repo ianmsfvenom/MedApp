@@ -50,7 +50,7 @@
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:id="@+id/imageView9"
+                        android:id="@+id/configButton"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_gravity="left|center_vertical"
@@ -88,8 +88,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="20dp"
                     android:layout_weight="2"
                     android:background="@drawable/container_background"
                     android:elevation="2dp"
@@ -100,13 +98,13 @@
                         android:id="@+id/textView8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Médicos"
+                        android:text="Pacientes"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/medicCountText"
+                        android:id="@+id/patientsCountText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -117,37 +115,6 @@
                         android:textSize="34sp" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="2"
-                    android:background="@drawable/container_background"
-                    android:elevation="2dp"
-                    android:orientation="vertical"
-                    android:padding="10dp">
-
-                    <TextView
-                        android:id="@+id/textView9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Medicamentos"
-                        android:textColor="#FFFFFF"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/medicinesCountText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginBottom="15dp"
-                        android:text="0"
-                        android:textColor="#EFEFEF"
-                        android:textSize="34sp" />
-                </LinearLayout>
             </LinearLayout>
 
             <TextView
@@ -222,12 +189,15 @@
             </LinearLayout>
 
             <ListView
+                android:id="@+id/patientsList"
                 android:layout_width="match_parent"
-                android:layout_height="390dp"
+                android:layout_height="350dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="6dp"
                 android:layout_marginRight="15dp"
-                android:background="@drawable/list_patients_background">
+                android:background="@drawable/list_patients_background"
+                android:divider="@drawable/header_detail_patient_background"
+                android:dividerHeight="0dp">
 
             </ListView>
 

@@ -2,7 +2,7 @@ package com.medapp.models;
 
 import java.util.Objects;
 
-public class PatientResponse {
+public class Patient {
     String id;
     String name_complete;
     String cpf;
@@ -10,7 +10,7 @@ public class PatientResponse {
     String address;
     String bed;
 
-    public PatientResponse(String id, String name_complete, String cpf, String birth_date, String address, String bed) {
+    public Patient(String id, String name_complete, String cpf, String birth_date, String address, String bed) {
         this.id = id;
         this.name_complete = name_complete;
         this.cpf = cpf;
@@ -60,7 +60,7 @@ public class PatientResponse {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        PatientResponse that = (PatientResponse) o;
+        Patient that = (Patient) o;
 
         if (!Objects.equals(id, that.id)) return false;
         if (!Objects.equals(name_complete, that.name_complete))
@@ -81,5 +81,25 @@ public class PatientResponse {
         result = 31 * result + (address != null ? address.hashCode() : 0);
         result = 31 * result + (bed != null ? bed.hashCode() : 0);
         return result;
+    }
+
+    public void setName_complete(String name_complete) {
+        this.name_complete = name_complete;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public void setBirth_date(String birth_date) {
+        this.birth_date = birth_date;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setBed(String bed) {
+        this.bed = bed;
     }
 }

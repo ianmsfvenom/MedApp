@@ -4,154 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:paddingBottom="20dp"
-    tools:context=".activitys.AddPatientActivity">
+    tools:context=".activitys.AddMedicinePatientActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/title_home_text_background"
-        android:elevation="10dp"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:elevation="5dp"
+        android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView10"
-            android:layout_width="match_parent"
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
             android:gravity="center"
-            android:text="Registro de paciente"
-            android:textColor="#F6F6F6"
-            android:textSize="28sp"
+            android:text="Adicionar medicamento"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
             android:textStyle="bold" />
-
     </LinearLayout>
 
     <TextView
-        android:id="@+id/titleEditName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginRight="25dp"
-        android:text="Nome completo:"
-        android:textColor="#272727" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/edit_text_background_2"
-        android:elevation="2dp"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/editTextName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="18dp"
-            android:layout_marginRight="18dp"
-            android:layout_weight="1"
-            android:backgroundTint="#00FFFFFF"
-            android:ems="10"
-            android:hint="Julio Alves Santos"
-            android:inputType="text"
-            android:textColor="#434343"
-            android:textColorHint="#6A6A6A" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/titleEditCpf"
+        android:id="@+id/titleEditAddress2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="35dp"
         android:layout_marginRight="25dp"
-        android:text="CPF:"
+        android:text="Nome do medicamento:"
         android:textColor="#272727" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/edit_text_background_2"
-        android:elevation="2dp"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/editTextCpf"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="18dp"
-            android:layout_marginRight="18dp"
-            android:layout_weight="1"
-            android:backgroundTint="#00FFFFFF"
-            android:ems="10"
-            android:hint="000.000.000-00"
-            android:inputType="text"
-            android:textColor="#434343"
-            android:textColorHint="#6A6A6A" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/titleEditBirth"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginRight="25dp"
-        android:text="Data de nascimento:"
-        android:textColor="#272727" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/edit_text_background_2"
-        android:elevation="2dp"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/editTextBirth"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="18dp"
-            android:layout_marginRight="18dp"
-            android:layout_weight="1"
-            android:backgroundTint="#00FFFFFF"
-            android:ems="10"
-            android:hint="dd/mm/aaaa"
-            android:inputType="datetime|date"
-            android:textColor="#434343"
-            android:textColorHint="#6A6A6A" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/titleEditAddress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginRight="25dp"
-        android:text="Endereço:"
-        android:textColor="#272727" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/edit_text_background_2"
         android:elevation="2dp"
@@ -166,35 +58,34 @@
             android:layout_weight="1"
             android:backgroundTint="#00FFFFFF"
             android:ems="10"
-            android:hint="Rua, número, bairro, cidade, estado"
+            android:hint="Nome do medicamento"
             android:inputType="text"
             android:textColor="#434343"
             android:textColorHint="#6A6A6A" />
     </LinearLayout>
 
     <TextView
-        android:id="@+id/titleEditBed"
+        android:id="@+id/titleEditAddress3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="25dp"
-        android:text="Código do leito:"
+        android:text="Data de vencimento"
         android:textColor="#272727" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="25dp"
         android:background="@drawable/edit_text_background_2"
         android:elevation="2dp"
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/editTextBed"
+            android:id="@+id/editTextDueDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="18dp"
@@ -202,14 +93,113 @@
             android:layout_weight="1"
             android:backgroundTint="#00FFFFFF"
             android:ems="10"
-            android:hint="A0000"
+            android:hint="Data de vencimento"
             android:inputType="text"
             android:textColor="#434343"
             android:textColorHint="#6A6A6A" />
     </LinearLayout>
 
     <TextView
-        android:id="@+id/alertTextError"
+        android:id="@+id/titleEditAddress4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="25dp"
+        android:text="Dosagem:"
+        android:textColor="#272727" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/edit_text_background_2"
+        android:elevation="2dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTextDosage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:ems="10"
+            android:hint="Dosagem"
+            android:inputType="text"
+            android:textColor="#434343"
+            android:textColorHint="#6A6A6A" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/titleEditAddress5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="25dp"
+        android:text="Tarja:"
+        android:textColor="#272727" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edit_text_background_2"
+        android:elevation="2dp"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/stripeRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp">
+
+            <RadioButton
+                android:id="@+id/noStripeRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#00A6FF"
+                android:text="Sem tarja"
+                android:textColor="#272727" />
+
+            <RadioButton
+                android:id="@+id/yellowStripeRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:buttonTint="#FFD500"
+                android:text="Amarelo"
+                android:textColor="#272727" />
+
+            <RadioButton
+                android:id="@+id/redStripeRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:buttonTint="#FF2525"
+                android:text="Vermelho"
+                android:textColor="#272727" />
+
+            <RadioButton
+                android:id="@+id/blackStripeRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:buttonTint="#272727"
+                android:text="Preto"
+                android:textColor="#272727" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/alertTextErrorMedicine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -224,31 +214,30 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="79dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
 
         <Button
-            android:id="@+id/cancelPatientButton"
-            android:layout_width="wrap_content"
+            android:id="@+id/cancelMedicineButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="15dp"
             android:layout_weight="1"
-            android:background="@drawable/cancel_button_background_2"
+            android:background="@drawable/cancel_button_background_3"
             android:text="Cancelar" />
 
         <Button
-            android:id="@+id/addPatientButton"
-            android:layout_width="wrap_content"
+            android:id="@+id/submitAddMedicineButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="15dp"
             android:layout_weight="1"
-            android:background="@drawable/add_button_background_2"
+            android:background="@drawable/add_button_background"
             android:text="Adicionar" />
     </LinearLayout>
-
 
 </LinearLayout>

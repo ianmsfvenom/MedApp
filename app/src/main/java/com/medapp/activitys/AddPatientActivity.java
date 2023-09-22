@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.medapp.R;
 import com.medapp.api.ApiServicesDatabase;
 import com.medapp.models.MedicUser;
-import com.medapp.models.PatientResponse;
+import com.medapp.models.Patient;
 import com.medapp.network.ApiClientDatabase;
 import com.medapp.utils.Validators;
 
@@ -35,7 +35,7 @@ public class AddPatientActivity extends AppCompatActivity {
         EditText editTextName = findViewById(R.id.editTextName);
         EditText editTextCPF = findViewById(R.id.editTextCpf);
         EditText editTextBirth = findViewById(R.id.editTextBirth);
-        EditText editTextAddress = findViewById(R.id.editTextAddress);
+        EditText editTextAddress = findViewById(R.id.editTextMedicine);
         EditText editTextBed = findViewById(R.id.editTextBed);
 
         TextView alertTextError = findViewById(R.id.alertTextError);
@@ -54,27 +54,29 @@ public class AddPatientActivity extends AppCompatActivity {
                 alertTextError.setVisibility(View.VISIBLE);
                 alertTextError.setText("Todos os campos devem ser preenchidos!");
             }
-            if(Validators.isDateValid(editTextBirth.getText().toString(), "dd/MM/yyyy")) {
+            if(!Validators.isDateValid(editTextBirth.getText().toString().trim(), "dd/MM/yyyy")) {
                 alertTextError.setVisibility(View.VISIBLE);
                 alertTextError.setText("Data inválida!");
+                return;
             }
-            if(Validators.isCPFValid(editTextCPF.getText().toString())) {
+            if(!Validators.isCPFValid(editTextCPF.getText().toString().trim())) {
                 alertTextError.setVisibility(View.VISIBLE);
                 alertTextError.setText("CPF inválido!");
+                return;
             }
 
             Retrofit retrofit = ApiClientDatabase.getRetrofitClient();
             ApiServicesDatabase servicesDatabase = retrofit.create(ApiServicesDatabase.class);
-            Call<PatientResponse> patientResponseCall = servicesDatabase.addPatient(MedicUser.mainMedicUser.getId(),
-                    editTextName.getText().toString(),
-                    editTextCPF.getText().toString(),
-                    editTextBirth.getText().toString(),
-                    editTextAddress.getText().toString(),
-                    editTextBed.getText().toString()
+            Call<Patient> patientResponseCall = servicesDatabase.addPatient(MedicUser.mainMedicUser.getId(),
+                    editTextName.getText().toString().trim(),
+                    editTextCPF.getText().toString().trim(),
+                    editTextBirth.getText().toString().trim(),
+                    editTextAddress.getText().toString().trim(),
+                    editTextBed.getText().toString().trim()
             );
-            patientResponseCall.enqueue(new Callback<PatientResponse>() {
+            patientResponseCall.enqueue(new Callback<Patient>() {
                 @Override
-                public void onResponse(Call<PatientResponse> call, Response<PatientResponse> response) {
+                public void onResponse(Call<Patient> call, Response<Patient> response) {
                     if(response.isSuccessful()) {
                         SweetAlertDialog sweetAlertDialog = new SweetAlertDialog(AddPatientActivity.this, SweetAlertDialog.SUCCESS_TYPE);
                         sweetAlertDialog.setTitleText("Paciente adicionado!")
@@ -97,7 +99,7 @@ public class AddPatientActivity extends AppCompatActivity {
                 }
 
                 @Override
-                public void onFailure(Call<PatientResponse> call, Throwable t) {
+                public void onFailure(Call<Patient> call, Throwable t) {
                     alertTextError.setVisibility(View.VISIBLE);
                     alertTextError.setText("Houve um erro inesperado!");
                 }

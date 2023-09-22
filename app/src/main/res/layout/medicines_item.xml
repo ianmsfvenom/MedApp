@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nameMedicineText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome do Medicamento"
+            android:textColor="#1B1B1B"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dueDateText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vencimento: "
+            android:textColor="#1B1B1B"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/dosageText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dosagem: "
+            android:textColor="#1B1B1B"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/stripeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tarja: "
+            android:textColor="#1B1B1B"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0"
+        android:background="@drawable/cancel_button_background_3"
+        android:text="Apagar" />
+</LinearLayout>
