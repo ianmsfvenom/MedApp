@@ -149,6 +149,7 @@
                     android:textColor="#202020" />
 
                 <RelativeLayout
+                    android:id="@+id/scanQRButton"
                     android:layout_width="150dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/qr_button_background">

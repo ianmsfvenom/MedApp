@@ -37,6 +37,9 @@ public interface ApiServicesDatabase {
                                     @Field("email")String email, @Field("password")String password,
                                     @Field("cpf") String cpf, @Field("birthDate")String birthDate, @Field("crm")String crm);
 
+    @GET("/patients/searchPatient")
+    Call<Patient> searchPatient(@Query("medicId")String id, @Query("typeQuery")String typeQuery, @Query("value") String value);
+
     @GET("/patients/getAllPatients")
     Call<List<Patient>> getAllPatients(@Query("medicId")String id);
 
@@ -48,6 +51,7 @@ public interface ApiServicesDatabase {
     @FormUrlEncoded
     @POST("/patients/removePatient")
     Call<Void> removePatient(@Field("medicId")String medicId, @Field("patientId") String patientId);
+
 
     @FormUrlEncoded
     @POST("/patients/updatePatient")

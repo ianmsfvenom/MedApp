@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -16,6 +18,10 @@
         android:usesCleartextTraffic="true"
         tools:replace="android:icon"
         tools:targetApi="31">
+        <activity
+            android:name=".utils.CaptureAct"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"/>
         <activity
             android:name=".ConfigsActivity"
             android:exported="false" />
